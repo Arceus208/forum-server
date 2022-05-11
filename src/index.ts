@@ -97,7 +97,10 @@ const main = async () => {
   await apolloServer.start();
   apolloServer.applyMiddleware({
     app,
-    cors: false /* { origin: "https://studio.apollographql.com", credentials: true } */,
+    cors: {
+      credentials: true,
+      origin: true,
+    } /* { origin: "https://studio.apollographql.com", credentials: true } */,
   });
 
   app.listen(process.env.PORT || 4000, () => {
