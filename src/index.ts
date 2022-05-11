@@ -99,7 +99,7 @@ const main = async () => {
     app,
     cors: {
       credentials: true,
-      origin: true,
+      origin: process.env.FRONT_END_URL,
     } /* { origin: "https://studio.apollographql.com", credentials: true } */,
   });
 
