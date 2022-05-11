@@ -58,12 +58,12 @@ const main = async () => {
     connectTimeout: 100000,
   });
 
-  app.use(
+  /* app.use(
     cors({
       origin: process.env.FRONT_END_URL,
       credentials: true,
     })
-  );
+  ); */
 
   app.use(
     session({
