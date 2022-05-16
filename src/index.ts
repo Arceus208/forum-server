@@ -58,12 +58,12 @@ const main = async () => {
     connectTimeout: 100000,
   });
 
-  /* app.use(
+  app.use(
     cors({
       origin: process.env.FRONT_END_URL,
       credentials: true,
     })
-  ); */
+  );
 
   app.use(
     session({
@@ -97,10 +97,7 @@ const main = async () => {
   await apolloServer.start();
   apolloServer.applyMiddleware({
     app,
-    cors: {
-      credentials: true,
-      origin: process.env.FRONT_END_URL,
-    } /* { origin: "https://studio.apollographql.com", credentials: true } */,
+    cors: false /* { origin: "https://studio.apollographql.com", credentials: true } */,
   });
 
   app.listen(process.env.PORT || 4000, () => {
