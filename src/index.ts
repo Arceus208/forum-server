@@ -60,7 +60,7 @@ const main = async () => {
 
   app.use(
     cors({
-      origin: process.env.FRONT_END_URL,
+      origin: "http://my-forum2.vercel.app",
       credentials: true,
     })
   );
