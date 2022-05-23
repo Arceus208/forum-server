@@ -58,24 +58,12 @@ const main = async () => {
     connectTimeout: 100000,
   });
 
-  /* app.use(
+  app.use(
     cors({
       origin: "http://my-forum2.vercel.app",
       credentials: true,
     })
-  ); */
-
-  app.use((req, res, next) => {
-    res.setHeader(
-      "Access-Control-Allow-Origin",
-      "https://my-forum2.vercel.app"
-    );
-    res.header(
-      "Access-Control-Allow-Headers",
-      "Origin, X-Requested-With, Content-Type, Accept"
-    );
-    next();
-  });
+  );
 
   app.use(
     session({
