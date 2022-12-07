@@ -76,7 +76,7 @@ const main = async () => {
         maxAge: 1000 * 60 * 60 * 24 * 365,
         httpOnly: true,
         sameSite: "none",
-        secure: false,
+        secure: true,
       },
       saveUninitialized: false,
       secret: process.env.COOKIE_SECRET!,
